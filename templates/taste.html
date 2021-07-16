@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block title%}Tastes{% endblock title%}
+{% block content%}
+
+<link rel="stylesheet" href="{% static 'taste/taste.css'%}">
+{% for sweet in object_list%}
+<div class="container">
+	<ul>
+		<li><img src="{{ sweet.image.url }}" width="500" height="500"></li>
+		<li>{{ sweet.name }}</li>
+		<li>{{ sweet.description }}</li>
+		<li>{{ sweet.price}}$</li>
+	</ul>
+</div>
+{% endfor%}
+{% endblock content%}

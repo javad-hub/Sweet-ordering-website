@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content%}
+<link rel="stylesheet" href="{% static 'home/home.css'%}">
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="{% static 'home/1.jpg'%}" style="width:100%">
+    <div class="text1">Any sweet that you can imagine!</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="{% static 'home/2.jpg'%}" style="width:100%">
+    <div class="text2">Any taste!</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="{% static 'home/3.jpg'%}" style="width:100%">
+    <div class="text3">Any shape!</div>
+  </div>
+</div>
+
+<div class="introductionblock">
+  	<p class="introduction"><strong>Fast and Easy!</strong></p>
+  	<p class="introductionexplaination">Ordering sweets has never been so easy just order and deleiver!<br>We are going to one of the most decent bakeries of city. </p>
+
+  </div>
+  <img class="chef" src="{% static 'home/4.jpg'%}" width=600 height="800">
+
+  
+  <div id="order">
+    <form>
+      Name:
+      <br/>
+      <input type="text" placeholder="Enter your name here...">
+      <br/>
+      Phone:
+      <br/>
+      <input type="number" placeholder="Enter your phone number here...">
+      <br/>
+      Address:
+      <br/>
+      <input type="textarea" placeholder="Enter your address here...">
+      <br/>
+      Taste:
+      <div>
+        <input name="taste" list="tastes" placeholder="Tastes">
+        <datalist id="tastes">
+          <option value="Spicy">
+        </datalist>
+      </div>
+    </form>
+  </div>
+
+  <script src="{% static 'home/home.js'%}"></script>
+{% endblock content%}

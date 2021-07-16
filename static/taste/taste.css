@@ -1,0 +1,8 @@
+.container {
+	border: 2px solid black;
+	margin-left: 200px;
+	padding: 20px;
+	display: flex-inline;
+	flex-wrap: wrap;
+	float: left;
+}
