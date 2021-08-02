@@ -1,6 +1,8 @@
 {% extends 'base.html'%}
 {% load static%}
 {% block content%}
+<meta name="viewport" content="width=device-width", initial-scale="1.0">
+<div class="width">
 <link rel="stylesheet" href="{% static 'home/home.css'%}">
 
 <!-- Slideshow container -->
@@ -28,32 +30,26 @@
   	<p class="introductionexplaination">Ordering sweets has never been so easy just order and deleiver!<br>We are going to one of the most decent bakeries of city. </p>
 
   </div>
-  <img class="chef" src="{% static 'home/4.jpg'%}" width=600 height="800">
+  <img class="chef" src="{% static 'home/8.jpg'%}" width=300 height="400">
 
   
   <div id="order">
     <form>
-      Name:
-      <br/>
-      <input type="text" placeholder="Enter your name here...">
-      <br/>
-      Phone:
-      <br/>
-      <input type="number" placeholder="Enter your phone number here...">
-      <br/>
-      Address:
-      <br/>
-      <input type="textarea" placeholder="Enter your address here...">
-      <br/>
-      Taste:
-      <div>
-        <input name="taste" list="tastes" placeholder="Tastes">
-        <datalist id="tastes">
-          <option value="Spicy">
-        </datalist>
-      </div>
+      {% csrf_token %}
+      {{ form.as_p }}
     </form>
+  </div>
+  <div class="baker">
+    <img id="cooks_1" src="{%static 'home/5.jpg'%}" width="300" hight="300"><br/>
+    <figcaption>She is the best!</figcaption>
+
+    <img id="cooks_2" src="{%static 'home/6.jpg'%}">
+    <figcaption>She is the best!</figcaption>
+
+    <img id="cooks_3" src="{%static 'home/7.jpg'%}">
+    <figcaption>She is the best!</figcaption>
   </div>
 
   <script src="{% static 'home/home.js'%}"></script>
+  </div>
 {% endblock content%}
